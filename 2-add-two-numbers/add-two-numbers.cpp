@@ -42,10 +42,8 @@ public:
             }
 
         }
-
         ListNode* result = dummyHeader->next;
         delete dummyHeader;
         return result;
     }
-
 };
