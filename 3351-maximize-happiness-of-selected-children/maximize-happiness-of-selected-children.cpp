@@ -23,7 +23,7 @@ public:
         for (int i = 0; i < k; i++) {
             maxSum += max(happiness[i] - i, 0);
         }
-         
+        
         return maxSum;
     }
 };
