@@ -11,12 +11,13 @@ instead of looping thru happiness array again
 class Solution {
 public:
     long long maximumHappinessSum(vector<int>& happiness, int k) {
-        // Use nth_element to partially sort
+        // partially sort via nth_element
         nth_element(happiness.begin(), happiness.begin() + k, happiness.end(), greater<int>());
         
-        // Now sort only the first k elements
+        // sort only the first k elements
         sort(happiness.begin(), happiness.begin() + k, greater<int>());
         
+        //calculate max happiness
         long long maxSum = 0;
         
         for (int i = 0; i < k; i++) {
