@@ -18,6 +18,7 @@ public:
         sort(happiness.begin(), happiness.begin() + k, greater<int>());
         
         //calculate max happiness
+        
         long long maxSum = 0;
         for (int i = 0; i < k; i++) {
             maxSum += max(happiness[i] - i, 0);
