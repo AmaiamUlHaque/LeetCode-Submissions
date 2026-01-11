@@ -34,11 +34,13 @@ private:
         int maxArea = 0;
         
         for (int i = 0; i <= n; i++) {
+
             // Use 0 as sentinel value for the last bar
             int currHeight = (i == n) ? 0 : heights[i];
             
             // While stack is not empty and current height is less than top of stack
             while (!st.empty() && currHeight < heights[st.top()]) {
+                
                 int height = heights[st.top()];
                 st.pop();
                 
@@ -46,7 +48,8 @@ private:
                 int width;
                 if (st.empty()) {
                     width = i;
-                } else {
+                } 
+                else {
                     width = i - st.top() - 1;
                 }
                 
