@@ -11,11 +11,13 @@ public:
         
         // Process each row
         for (int i = 0; i < rows; i++) {
+
             // Update heights array
             for (int j = 0; j < cols; j++) {
                 if (matrix[i][j] == '1') {
                     heights[j] += 1;
-                } else {
+                } 
+                else {
                     heights[j] = 0;
                 }
             }
@@ -40,7 +42,7 @@ private:
             
             // While stack is not empty and current height is less than top of stack
             while (!st.empty() && currHeight < heights[st.top()]) {
-                
+
                 int height = heights[st.top()];
                 st.pop();
                 
